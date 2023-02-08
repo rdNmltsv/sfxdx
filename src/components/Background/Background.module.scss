@@ -1,0 +1,35 @@
+@import "../../static/styles/resources";
+
+.background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+
+  .ellipse {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    opacity: 0.5;
+    filter: blur(100px);
+
+    &.bg_1 {
+      animation: bg 5s linear 0s infinite alternate;
+    }
+
+    &.bg_2 {
+      animation: bg 5s linear 0s infinite alternate-reverse;
+    }
+
+    @keyframes bg {
+      from {
+        background: $light-accents-accent1-quaternary;
+      }
+      to {
+        background: $light-systemerror-successful;
+      }
+    }
+  }
+}
